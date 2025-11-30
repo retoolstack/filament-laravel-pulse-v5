@@ -26,6 +26,20 @@ Filament Laravel Pulse offers the following features:
 
 To integrate the Filament Laravel Pulse package into your project, follow these steps:
 
+### Version Compatibility
+
+This package supports multiple Filament versions. Please install the appropriate version based on your Filament installation:
+
+- **For Filament 3.x**: Install version `1.1.7`
+  ```bash
+  composer require dotswan/filament-laravel-pulse:^1.1.7
+  ```
+
+- **For Filament 4.x**: Install version `2.x`
+  ```bash
+  composer require dotswan/filament-laravel-pulse:^2.0
+  ```
+
 **Install Pulse:**
 ```bash
 composer require laravel/pulse
@@ -35,7 +49,11 @@ php artisan migrate --step
 
 **Install Filament Laravel Pulse:**
 ```bash
-composer require dotswan/filament-laravel-pulse
+# For Filament 3.x
+composer require dotswan/filament-laravel-pulse:^1.1.7
+
+# For Filament 4.x
+composer require dotswan/filament-laravel-pulse:^2.0
 ```
 
 Filament Laravel Pulse can be configured to suit your application's specific needs. 

@@ -1,10 +1,22 @@
-const preset = require('./vendor/filament/filament/tailwind.config.preset')
-import container from '@tailwindcss/container-queries'
+let preset = null;
+try {
+    preset = require('./vendor/filament/filament/tailwind.config.preset');
+} catch (e) {
+    // Preset not found, will use default Tailwind config
+}
 
-module.exports = {
-    presets: [preset],
+const container = require('@tailwindcss/container-queries');
+
+const config = {
     content: [
+        './resources/views/**/*.blade.php',
         './vendor/laravel/pulse/resources/views/**/*.blade.php',
     ],
     plugins: [container],
+};
+
+if (preset) {
+    config.presets = [preset];
 }
+
+module.exports = config;
